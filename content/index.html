@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+.container {
+  padding: 16px;
+}
+
+
+textarea#txtJCL {
+        width: 90%;
+        height: 270px;
+        border: 3px solid #cccccc;
+        padding: 5px;
+        font-family: Tahoma, sans-serif;
+        font-size: 10px;
+        /*background-image: url(bg.gif);*/
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        /* Determine appearance of code editor */
+        background-color: #272822;
+        border-color: #272822;
+        color: #ffffff;
+    }
+
+</style>
+</head>
+<body>
+  
+<center>    
+<h2>Submit Jcl File</h2>
+<p>
+    Use the following in the content folder:
+    <pre>
+        python3 -m http.server 8080
+    </pre>
+</p>
+<form  method="post" action="Jcl" id="form" style="width:25%;" enctype="multipart/form-data">
+
+  <div class="container">
+    <input type="file" id="Upload" name="Upload" />
+        
+    <button type="submit">Upload</button>
+  </div>
+  <textarea id="txtJCL">
+  </textarea>
+
+</form>
+</center>
+<script src="js/index.js"></script>
+</body>
+</html>
